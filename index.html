@@ -1,0 +1,366 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>A Little Thought For You</title>
+
+<!-- Confetti -->
+<script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.9.3/dist/confetti.browser.min.js"></script>
+
+<style>
+
+*{
+    box-sizing:border-box;
+    margin:0;
+    padding:0;
+}
+
+body{
+    min-height:100vh;
+
+    display:flex;
+    align-items:center;
+    justify-content:center;
+
+    background:#fdf6f7;
+
+    font-family:Georgia,serif;
+
+    overflow:hidden;
+}
+
+
+/* ================================
+   1:1 CARD
+================================ */
+
+.card{
+
+    width:min(90vw,500px);
+
+    aspect-ratio:1 / 1;
+
+    padding:12px;
+
+    background:#fffafa;
+
+    border:1px solid #dca0ae;
+
+    border-radius:24px;
+
+    box-shadow:
+        0 15px 40px rgba(130,60,80,.12);
+
+    position:relative;
+}
+
+
+/* ================================
+   INNER BORDER
+================================ */
+
+.card-inner{
+
+    width:100%;
+    height:100%;
+
+    border:1px dashed #e4b2bc;
+
+    border-radius:17px;
+
+    display:flex;
+
+    flex-direction:column;
+
+    align-items:center;
+
+    justify-content:center;
+
+    text-align:center;
+
+    padding:35px 25px;
+
+    position:relative;
+
+}
+
+
+/* ================================
+   CORNER DETAILS
+================================ */
+
+.corner{
+
+    position:absolute;
+
+    font-size:17px;
+
+    color:#d9a0ae;
+
+}
+
+.corner.one{
+    top:20px;
+    left:20px;
+}
+
+.corner.two{
+    top:20px;
+    right:20px;
+}
+
+.corner.three{
+    bottom:20px;
+    left:20px;
+}
+
+.corner.four{
+    bottom:20px;
+    right:20px;
+}
+
+
+/* ================================
+   TOP HEART
+================================ */
+
+.top-heart{
+
+    position:absolute;
+
+    top:25px;
+
+    color:#d7667e;
+
+    font-size:20px;
+
+}
+
+
+/* ================================
+   SMALL TITLE
+================================ */
+
+.small-title{
+
+    font-family:Arial,sans-serif;
+
+    font-size:10px;
+
+    letter-spacing:3px;
+
+    text-transform:uppercase;
+
+    color:#a26b77;
+
+    margin-bottom:18px;
+
+}
+
+
+/* ================================
+   HEADING
+================================ */
+
+h1{
+
+    font-family:Georgia,serif;
+
+    font-style:italic;
+
+    font-weight:normal;
+
+    font-size:clamp(27px,7vw,40px);
+
+    line-height:1.25;
+
+    color:#b94e68;
+
+    margin-bottom:22px;
+
+}
+
+
+/* ================================
+   MESSAGE
+================================ */
+
+.message{
+
+    max-width:370px;
+
+    font-size:clamp(15px,4vw,18px);
+
+    line-height:1.9;
+
+    color:#594348;
+
+}
+
+.message strong{
+
+    color:#b94e68;
+
+    font-weight:normal;
+
+}
+
+
+/* ================================
+   DIVIDER
+================================ */
+
+.divider{
+
+    width:65px;
+
+    height:1px;
+
+    background:#dfa5b1;
+
+    margin:22px auto;
+
+}
+
+
+/* ================================
+   CLOSING
+================================ */
+
+.closing{
+
+    font-family:Georgia,serif;
+
+    font-style:italic;
+
+    font-size:16px;
+
+    color:#9d596a;
+
+}
+
+
+/* ================================
+   MOBILE
+================================ */
+
+@media(max-width:400px){
+
+    .card{
+        width:92vw;
+    }
+
+    .card-inner{
+        padding:25px 18px;
+    }
+
+    h1{
+        font-size:28px;
+    }
+
+    .message{
+        font-size:14px;
+        line-height:1.8;
+    }
+
+}
+
+</style>
+</head>
+
+
+<body>
+
+
+<div class="card">
+
+    <div class="card-inner">
+
+
+        <!-- Decorative corners -->
+
+        <div class="corner one">·</div>
+        <div class="corner two">♡</div>
+        <div class="corner three">♡</div>
+        <div class="corner four">·</div>
+
+
+        <div class="top-heart">
+            ♡
+        </div>
+
+
+        <div class="small-title">
+            A quiet little thought
+        </div>
+
+
+        <h1>
+            If you're awake...
+        </h1>
+
+
+        <div class="message">
+
+            Just know that somewhere,
+            someone is thinking about you
+            with the softest smile.
+
+            <br><br>
+
+            And honestly,
+            <strong>you're my favourite thought.</strong>
+
+        </div>
+
+
+        <div class="divider"></div>
+
+
+        <div class="closing">
+            Close your eyes and smile for me. ♡
+        </div>
+
+
+    </div>
+
+</div>
+
+
+<script>
+
+/* Soft confetti */
+
+window.addEventListener("load",function(){
+
+    setTimeout(function(){
+
+        confetti({
+
+            particleCount:40,
+
+            spread:50,
+
+            startVelocity:16,
+
+            gravity:.8,
+
+            scalar:.65,
+
+            origin:{
+                x:.5,
+                y:.35
+            }
+
+        });
+
+    },600);
+
+});
+
+</script>
+
+</body>
+</html>
